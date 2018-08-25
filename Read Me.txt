@@ -1,7 +1,7 @@
 Folder Structure:-
 
 	1 - vehicles-config-service (Cloud Config Server)
-	2 - config-repo (Configuration files Repository)
+	2 - vehicles-config-service/config-repo (Configuration files Repository)
 	3 - vehicles-dashboard (Frontend, Angualar 4 App)
 		vehicles-dashboard.zip (cmpressed version of the frontend app so i can upload it on github)
 	4 - vehicles-discovery-server (Cloud Discovery Eureka Server)
