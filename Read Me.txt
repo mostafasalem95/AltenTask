@@ -27,28 +27,31 @@ Technology Stack:-
 	2 - Cloud Config Client:
 		spring-cloud-config Client
 		
-	3 - Cloud Discovery (Eureka Discovery Server & Client):
-		Service discovery using spring-cloud-netflix and Eureka
+	3 - Cloud Discovery Eureka Server:
+		spring-cloud-netflix Eureka Server
+	
+	4 - Cloud Discovery Eureka Discovery
+		service discovery using spring-cloud-netflix and Eureka
 		
-	4 - Cloud Routing (ZUUL):
+	5 - Cloud Routing ZUUL:
 		Intelligent and programmable routing with spring-cloud-netflix Zuul
 		
-	5 - Ribbon:
+	6 - Cloud Routing Ribbon:
 		Client side load balancing with spring-cloud-netflix and Ribbon
 	
-	6 - Feign:
+	7 - Cloud Routing Feign:
 		Declarative REST clients with spring-cloud-netflix Feign
 		
-	7 - Cloud Circuit Breaker (Hystrix):
+	8 - Cloud Circuit Breaker Hystrix:
 		Circuit breaker with spring-cloud-netflix Hystrix
 		
-	8 - H2:
+	9 - H2:
 		H2 database (with embedded support)
 	
-	9 - Spring Web:
+	10 - Spring Web:
 		Full-stack web development with Tomcat and Spring MVC
 		
-	10 - Angular 4:
+	11 - Angular 4:
 		a Structural Javascript Framework for Dynamic Web Apps
 	
 	
