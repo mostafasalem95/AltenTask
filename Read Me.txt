@@ -4,17 +4,16 @@ Folder Structure:-
 	2 - vehicles-config-service/config-repo (Configuration files Repository)
 		vehicles-config-service/config-repo.zip (Compressed Version)
 	3 - vehicles-dashboard (Frontend, Angualar 4 App)
-	4 -	vehicles-dashboard.zip (cmpressed version of the frontend app so i can upload it on github)
-	5 - vehicles-discovery-server (Cloud Discovery Eureka Server)
-	6 - vehicles-gateway-service (Cloud Routing ZUUL)
-	7 - vehicles-service (customer databse and api)
-	8 - vehicles-status-service (Car Simulation Service)
-	9 - Full architectural sketch (image for solution design)
-	10 - customers-api (screenshot for customer api response)
-	11 - vehicle-status-api (screenshot for vehicle status api)
-	12 - Full architectural sketch (screenshot for the frontend app)
-	13 - read me file for the documentation
-	14 - jars (contains jars for all the services in case you want to run them directly from your CMD)
+	4 - vehicles-discovery-server (Cloud Discovery Eureka Server)
+	5 - vehicles-gateway-service (Cloud Routing ZUUL)
+	6 - vehicles-service (customer databse and api)
+	7 - vehicles-status-service (Car Simulation Service)
+	8 - Full architectural sketch (image for solution design)
+	9 - customers-api (screenshot for customer api response)
+	10 - vehicle-status-api (screenshot for vehicle status api)
+	11 - Full architectural sketch (screenshot for the frontend app)
+	12 - read me file for the documentation
+	13 - jars (contains jars for all the services in case you want to run them directly from your CMD)
 	
 	- inside every folder you will find docker file in case you want to run them inside docker
 	
