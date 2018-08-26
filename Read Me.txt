@@ -2,6 +2,7 @@ Folder Structure:-
 
 	1 - vehicles-config-service (Cloud Config Server)
 	2 - vehicles-config-service/config-repo (Configuration files Repository)
+		vehicles-config-service/config-repo.zip (Compressed Version)
 	3 - vehicles-dashboard (Frontend, Angualar 4 App)
 	4 -	vehicles-dashboard.zip (cmpressed version of the frontend app so i can upload it on github)
 	5 - vehicles-discovery-server (Cloud Discovery Eureka Server)
@@ -60,7 +61,7 @@ Deployment Steps:-
 	- if you made any changes in config-repo you must commit your changes becuase it's a git repository.
 	
 	* Please follow below steps:-
-		1 - copy (vehicles-config-service/config-repo) folder under your home directory.
+		1 - copy (vehicles-config-service/config-repo) folder under your user home directory.
 		2 - start discovery server
 		3 - start config server
 		4 - start the rest of the services
