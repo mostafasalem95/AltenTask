@@ -1,11 +1,10 @@
 Folder Structure:-
 
 	1 - vehicles-config-service (Cloud Config Server)
-	2 - config-repo (Configuration files Repository)
-		config-repo.zip (Compressed Version)
-	3 - vehicles-dashboard (Frontend, Angualar 4 App)
-	4 - vehicles-discovery-server (Cloud Discovery Eureka Server)
-	5 - vehicles-gateway-service (Cloud Routing ZUUL)
+	2 - config-repo.zip (Configuration files Repository)
+	3 - vehicles-dashboard (Frontend App)
+	4 - vehicles-discovery-server (Cloud Discovery Server)
+	5 - vehicles-gateway-service (Cloud Routing Gateway)
 	6 - vehicles-service (customer databse and api)
 	7 - vehicles-status-service (Car Simulation Service)
 	8 - Full architectural sketch (image for solution design)
