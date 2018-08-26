@@ -1,0 +1,59 @@
+<div class="row">
+  <div class="col-sm-6 col-lg-4">
+  <table>
+    <tr>
+      <td>Filter By Status : </td>
+      <td>
+        <select #s (change)="filterStatus(s.value)">
+          <option value="-1">All</option>
+          <option *ngFor="let s of status" [value]="s">{{ s }}</option>
+        </select>
+      </td>
+    </tr>
+     <tr>
+      <td>Filter By Name : </td>
+      <td>
+        <select #t (change)="filterName(t.value)">
+          <option value="-1">All</option>
+          <option *ngFor="let c of customerNames" [value]="c">{{ c }}</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+</div>
+</div>
+
+<br />
+<br />
+
+<div class="row">
+  <div class="col-sm-6 col-lg-4" ng-if="customers.length > 0" *ngFor="let c of customers">
+      <div class="panel panel-primary">
+          <div class="panel-heading">
+              <h4 class="text-center">{{ c.name }}<span class="glyphicon glyphicon-saved pull-right"></span></h4>
+          </div>
+          <div class="panel-body text-center">
+              <p class="lead">
+                  <strong>{{ c.address }}</strong>
+              </p>
+          </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Vehicle</th>
+                <th scope="col">Reg NR</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-if="c.vehicle.length > 0" *ngFor="let v of c.vehicle">
+                <td>{{ v.id }}</td>
+                <td>{{ v.regNr }}</td>   
+                <td>{{ v.status }}</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+  </div>
+</div>
+
