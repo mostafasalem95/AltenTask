@@ -11,8 +11,9 @@ Folder Structure:-
 	9 - customers-api (screenshot for customer api response)
 	10 - vehicle-status-api (screenshot for vehicle status api)
 	11 - Full architectural sketch (screenshot for the frontend app)
-	12 - read me file for the documentation
-	13 - jars (contains jars for all the services in case you want to run them directly from your CMD)
+	12 - hystrix-dashboard (screenshot for hystrix dashboard)
+	13 - read me file for the documentation
+	14 - jars (contains jars for all the services in case you want to run them directly from your CMD)
 	
 	- inside every folder you will find docker file in case you want to run them inside docker
 	
