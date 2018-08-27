@@ -1,7 +1,11 @@
 package com.alten.vehicles.service.impl;
 
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.http.HttpException;
+import org.hibernate.engine.jdbc.spi.SqlExceptionHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.alten.vehicles.entity.Customer;
@@ -22,13 +26,27 @@ public class VehicleServiceImpl implements VehicleService {
 	
 	@Override
 	public List<Customer> getAllCustomers() {
-		return customerRepo.findAll();
+		List<Customer> c = new ArrayList<Customer>();
+		try{
+			c = customerRepo.findAll();
+		}catch(Exception ex) {
+			// do some logging and exception handling
+			System.out.println(ex.getMessage());
+		}
+		return c;
 	}
 
 	@HystrixCommand(groupKey="fallback", commandKey="fallback", fallbackMethod="statusFallback")
 	@Override
 	public VehicleStatusBean getVehicleStatus(String vehicleId) {
-		return vssp.getVehicleStatus(vehicleId);
+		VehicleStatusBean b = new VehicleStatusBean();
+		try{
+			b = vssp.getVehicleStatus(vehicleId);
+		}catch(Exception ex) {
+			// do some logging and exception handling
+			System.out.println(ex.getMessage());
+		}
+		return b;
 	}
 
 	
