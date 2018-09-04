@@ -1,11 +1,10 @@
 package com.alten.vehicles.service.impl;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.http.HttpException;
-import org.hibernate.engine.jdbc.spi.SqlExceptionHelper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.alten.vehicles.entity.Customer;
@@ -18,6 +17,8 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 @Service
 public class VehicleServiceImpl implements VehicleService {
 
+	private static final Logger logger = LoggerFactory.getLogger(VehicleServiceImpl.class);
+	
 	@Autowired
 	private ICustomerRepo customerRepo;
 	
@@ -29,6 +30,7 @@ public class VehicleServiceImpl implements VehicleService {
 		List<Customer> c = new ArrayList<Customer>();
 		try{
 			c = customerRepo.findAll();
+			logger.info("Getting All the Customers");
 		}catch(Exception ex) {
 			// do some logging and exception handling
 			System.out.println(ex.getMessage());
@@ -39,13 +41,7 @@ public class VehicleServiceImpl implements VehicleService {
 	@HystrixCommand(groupKey="fallback", commandKey="fallback", fallbackMethod="statusFallback")
 	@Override
 	public VehicleStatusBean getVehicleStatus(String vehicleId) {
-		VehicleStatusBean b = new VehicleStatusBean();
-		try{
-			b = vssp.getVehicleStatus(vehicleId);
-		}catch(Exception ex) {
-			// do some logging and exception handling
-			System.out.println(ex.getMessage());
-		}
+		VehicleStatusBean b = vssp.getVehicleStatus(vehicleId);
 		return b;
 	}
 
